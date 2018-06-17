@@ -1,20 +1,63 @@
 <html>
 <head>
-  <title>ToDo List</title>
+  <title>Task Manager</title>
   <script src="index.js" type="text/javascript"></script>
-  <link href="index.css" type="text/css" >
+  <link rel="stylesheet" href="index.css" type="text/css" >
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 
     <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div style="text-align:center;"><div style=" margin:auto; margin-top:20px; height:100px; width:100px;"><img style="height:100px; width:100px;" src="images/todo_main.jpeg" /></div><h1>ToDo Manager</h1></div><br /><hr><br/>
-        <input type="text" class="list-data"></input><button class="btn btn-success " onclick="addTodo()">Add ToDo</button>
+        <div style="text-align:center;"><div style=" margin:auto; margin-top:20px; height:100px; width:100px;"><img style="height:100px; width:100px;" src="images/todo_main.jpeg" /></div><h1 style="font-family: 'Open Sans', sans-serif;">Task Manager</h1></div><br /><hr><br/>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10 centered">
+        <span class="" style="display:inline-flex;">
+          <input type="text" style="width:400px; height:36px;" class="list-data" class="form-control" placeholder="Enter task here">
+          <i id="icon11" class="fa fa-plus-circle" style="font-size:36px; margin-left:20px; color:green; padding:0px;" onclick="addTodo()" title="Add Task"></i>
+          <i id="icon11" class="fa fa-sort-amount-asc" style="font-size:36px; margin-left:20px; color:blue; padding:0px;" onclick="addTodo()" aria-hidden="true" title="Sort checked and unchecked tasks"></i>
+          <i id="icon11" class="fa fa-refresh" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:grey; padding:0px;" aria-hidden="true" title="Delete the current list"></i>
+        </span>
+        <div class="col-md-1"></div>
       </div>
+    </div>
+
+<br >
+
+    <div class="row">
+      <ul style="text-decoration:none;" id="list"></ul>
+    </div>
+
       <div class="col-md-2"></div>
+
+
+      <div class="container">
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>This action is irreversible. Are you sure, you want to delete all tasks?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-alert" onclick="clearAll()" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-alert" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

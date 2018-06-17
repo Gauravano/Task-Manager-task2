@@ -14,36 +14,33 @@
 <body>
 
     <div class="col-md-2"></div>
-      <div class="col-md-8">
+      <div class="col-md-8 col-xs-12">
         <div style="text-align:center;"><div style=" margin:auto; margin-top:20px; height:100px; width:100px;"><img style="height:100px; width:100px;" src="images/todo_main.jpeg" /></div><h1 style="font-family: 'Open Sans', sans-serif;">Task Manager</h1></div><br /><hr><br/>
 
     <div class="row">
         <div class="col-md-1"></div>
 
-        <div class="col-md-10 centered">
-        <span class="" style="display:inline-flex;">
-          <input type="text" style="width:400px; height:36px;" class="list-data" class="form-control" placeholder="Enter task here">
-          <i id="icon11" class="fa fa-plus-circle" style="font-size:36px; margin-left:20px; color:green; padding:0px;" onclick="addTodo()" title="Add Task"></i>
-          <i id="icon11" class="fa fa-sort-amount-asc" style="font-size:36px; margin-left:20px; color:blue; padding:0px;" onclick="addTodo()" aria-hidden="true" title="Sort checked and unchecked tasks"></i>
-          <i id="icon11" class="fa fa-refresh" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:grey; padding:0px;" aria-hidden="true" title="Delete the current list"></i>
+        <div class="col-md-10 col-xs-12 centered">
+        <span class="row">
+          <input type="text" style="width:400px; height:36px;" class="col-md-9 col-xs-12 list-data" class="form-control" placeholder="Enter task here">
+          <i id="icon11" class="fa fa-plus-circle col-md-1 col-xs-3" style="font-size:36px; margin-left:20px; color:green; padding:0px;" onclick="addTodo()" title="Add Task"></i>
+          <i id="icon11" class="fa fa-sort-amount-asc col-md-1 col-xs-3" style="font-size:36px; margin-left:20px; color:blue; padding:0px;" onclick="sortAll()" title="Sort checked and unchecked tasks"></i>
+          <i id="icon11" class="fa fa-refresh col-md-1 col-xs-3" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:grey; padding:0px;" title="Delete the current list"></i>
         </span>
         <div class="col-md-1"></div>
       </div>
     </div>
 
-<br >
+    <br >
 
     <div class="row">
       <ul style="text-decoration:none;" id="list"></ul>
     </div>
 
-      <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
 
 
-      <div class="container">
-
-
-  <!-- Modal -->
+<div class="container">
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">

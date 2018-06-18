@@ -22,11 +22,11 @@
 
         <div class="col-md-10 col-xs-12 centered">
         <span class="row">
-          <input type="text" style="width:400px; height:36px;" class="col-md-9 col-xs-12 list-data" class="form-control" placeholder="Enter task here">
+          <input type="text" style="width:380px; height:36px;" class="col-md-6 col-xs-12 list-data" class="form-control" placeholder="Enter task here">
           <i id="icon11" class="fa fa-plus-circle col-md-1 col-xs-3" style="font-size:36px; margin-left:20px; color:green; padding:0px;" onclick="addTodo()" title="Add Task"></i>
           <i id="icon11" class="fa fa-sort-amount-asc col-md-1 col-xs-3" style="font-size:36px; margin-left:20px; color:blue; padding:0px;" onclick="sortAll()" title="Sort checked and unchecked tasks"></i>
-          <i id="icon11" class="fa fas-ban col-md-1 col-xs-3" onclick="clearChecked()" style="font-size:36px; margin-left:20px; color:grey; padding:0px;" title="Delete the checked tasks"></i>
-          <i id="icon11" class="fa fa-refresh col-md-1 col-xs-3" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:grey; padding:0px;" title="Delete the current list"></i>
+          <i id="icon11" class="fa fa-ban col-md-1 col-xs-3" onclick="clearChecked()" style="font-size:36px; margin-left:20px; color:black; padding:0px;" title="Delete the checked tasks"></i>
+          <i id="icon11" class="fa fa-trash col-md-1 col-xs-3" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:red; padding:0px;" title="Delete the complete list"></i>
         </span>
         <div class="col-md-1"></div>
       </div>
@@ -36,6 +36,9 @@
 
     <div class="row">
       <ul style="text-decoration:none;" id="list"></ul>
+      <script>
+        loadList();
+      </script>
     </div>
 
     <div class="col-md-2"></div>

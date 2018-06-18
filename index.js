@@ -85,3 +85,16 @@ function markComplete(id){
     box.nextSibling.style = "text-decoration:none;"
   }
 }
+
+function clearChecked(){
+        var mylist = $('ul');
+        var listitems = mylist.children('li').get();
+
+        console.log(listitems);
+
+        for (var i = 0; i < listitems.length; i++) {
+            if(listitems[i].className == "checked" ){
+              listitems[i].parentNode.removeChild(listitems[i]);
+            }
+        }
+}

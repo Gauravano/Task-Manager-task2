@@ -1,32 +1,32 @@
 <html>
 <head>
   <title>Task Manager</title>
-  <script src="index.js" type="text/javascript"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-96x96.png">
+  <script src="script.js" type="text/javascript"></script>
   <link rel="stylesheet" href="index.css" type="text/css" >
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <script src="js/jquery-1.11.3.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 
     <div class="col-md-2"></div>
-      <div class="col-md-8 col-xs-12">
+      <div class="col-md-8">
         <div style="text-align:center;"><div style=" margin:auto; margin-top:20px; height:100px; width:100px;"><img style="height:100px; width:100px;" src="images/todo_main.jpeg" /></div><h1 style="font-family: 'Open Sans', sans-serif;">Task Manager</h1></div><br /><hr><br/>
 
     <div class="row">
         <div class="col-md-1"></div>
 
-        <div class="col-md-10 col-xs-12 centered">
+        <div class="col-md-10 centered">
         <span class="row">
-          <input type="text" style="width:380px; height:36px;" class="col-md-6 col-xs-12 list-data" class="form-control" placeholder="Enter task here">
-          <i id="icon11" class="fa fa-plus-circle col-md-1 col-xs-3" style="font-size:36px; margin-left:20px; color:green; padding:0px;" onclick="addTodo()" title="Add Task"></i>
-          <i id="icon11" class="fa fa-sort-amount-asc col-md-1 col-xs-3" style="font-size:36px; margin-left:20px; color:blue; padding:0px;" onclick="sortAll()" title="Sort checked and unchecked tasks"></i>
-          <i id="icon11" class="fa fa-ban col-md-1 col-xs-3" onclick="clearChecked()" style="font-size:36px; margin-left:20px; color:black; padding:0px;" title="Delete the checked tasks"></i>
-          <i id="icon11" class="fa fa-trash col-md-1 col-xs-3" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:red; padding:0px;" title="Delete the complete list"></i>
+          <input type="text" style="width:380px; height:36px;" class="col-md-6 col-sm-12 list-data" class="form-control" placeholder="Enter task here">
+          <i id="icon11" class="fa fa-plus-circle col-md-1" style="font-size:36px; margin-left:20px; color:green; padding:0px;" onclick="addTodo()" title="Add Task"></i>
+          <i id="icon11" class="fa fa-sort-amount-asc col-md-1" style="font-size:36px; margin-left:20px; color:blue; padding:0px;" onclick="sortAll()" title="Sort checked and unchecked tasks"></i>
+          <i id="icon11" class="fa fa-ban col-md-1" onclick="clearChecked()" style="font-size:36px; margin-left:20px; color:black; padding:0px;" title="Delete the checked tasks"></i>
+          <i id="icon11" class="fa fa-trash col-md-1" data-toggle="modal" data-target="#myModal" style="font-size:36px; margin-left:20px; color:red; padding:0px;" title="Delete the complete list"></i>
         </span>
         <div class="col-md-1"></div>
       </div>
@@ -35,7 +35,7 @@
     <br >
 
     <div class="row">
-      <ul style="text-decoration:none;" id="list"></ul>
+      <ul style="text-decoration:none;" class="col-md-12" id="list"></ul>
       <script>
         loadList();
       </script>

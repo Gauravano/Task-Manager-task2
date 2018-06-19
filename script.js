@@ -26,6 +26,7 @@ function loadList(){
     html += checkBox+ `<span class='col-md-9 col-xs-6' ${sty}>${listitems[i].data}</span>` + arrowUp + arrowDown + deleteBox +"</li>";
     $('#list').append(html);
   }
+  arrowDisplay();
 }
 
 function Item(data,checked){
@@ -49,9 +50,11 @@ function makeArray(){
     }
 
     todo.push(new Item(listitems[i].innerText,temp));
+    $('li')[i].childNodes[2].style.visibility = "visible";
+    $('li')[i].childNodes[3].style.visibility = "visible";
   }
   localStorage['list'] = JSON.stringify(todo);
-
+  arrowDisplay()
 }
 
 function deleteTodo(id){
@@ -163,4 +166,9 @@ function clearChecked(){
             console.log(listitems);
         }
         makeArray();
+}
+
+function arrowDisplay(){
+  $('li')[0].childNodes[2].style.visibility = "hidden"
+  $('li').last()[0].childNodes[3].style.visibility = "hidden"
 }
